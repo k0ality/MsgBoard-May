@@ -1,0 +1,20 @@
+{
+    "name": "maryna/msgboard",
+    "description": "study",
+    "authors": [
+        {
+            "name": "Maryna",
+            "email": "marvlarz@gmail.com"
+        }
+    ],
+    "require": {
+        "league/plates": "3.*",
+        "ext-mysqli": "*",
+        "nesbot/carbon": "^2.16"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "Msgboard\\" : "classes/"
+        }
+    }
+}
