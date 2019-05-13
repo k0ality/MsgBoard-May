@@ -1,0 +1,18 @@
+paths:
+    migrations: '%%PHINX_CONFIG_DIR%%/db/migrations'
+    seeds: '%%PHINX_CONFIG_DIR%%/db/seeds'
+
+environments:
+    default_migration_table: phinxlog
+    default_database: development
+    development:
+        adapter: mysql
+        host: localhost
+        name: fakedb
+        user: root
+        pass: 'A7YWh8$#'
+        port: 3306
+        unix_socket: /tmp/mysql.sock
+        charset: utf8
+
+version_order: creation
