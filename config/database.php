@@ -2,7 +2,7 @@
 
 return [
     'host' => 'localhost',
-    'database' => 'msgboard',
+    'database' => 'fakedb',
     'user' => 'root',
     'password' => 'A7YWh8$#'
 ];

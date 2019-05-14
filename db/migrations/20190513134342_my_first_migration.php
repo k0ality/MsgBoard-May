@@ -32,10 +32,19 @@ class MyFirstMigration extends AbstractMigration
     public function change()
     {
 
+/*
         $exists_users = $this->hasTable('users');
+        $exists_posts = $this->hasTable('posts');
+        $exists_posts_like = $this->hasTable('posts_like');
+
         if ($exists_users) {
             $this->table('users')->drop()->save();
+        } else if ($exists_posts) {
+            $this->table('posts')->drop()->save();
+        } else if ($exists_posts_like) {
+            $this->table('posts_like')->drop()->save();
         }
+*/
 
         $users = $this->table('users');
         $users->addColumn('dt_add', 'datetime', ['null' => false])
@@ -47,11 +56,6 @@ class MyFirstMigration extends AbstractMigration
                 'unique' => true,
                 'name' => 'email'])
             ->create();
-
-        $exists_posts = $this->hasTable('posts');
-        if ($exists_posts) {
-            $this->table('posts')->drop()->save();
-        }
 
         $posts = $this->table('posts');
         $posts->addColumn('user_id', 'integer', ['limit' => 11, 'signed' => false, 'null' => false])
@@ -79,11 +83,6 @@ class MyFirstMigration extends AbstractMigration
         ])
             ->save();
 */
-
-        $exists_posts_like = $this->hasTable('posts_like');
-        if ($exists_posts_like) {
-            $this->table('posts_like')->drop()->save();
-        }
 
         $posts_like = $this->table('posts_like');
         $posts_like->addColumn('user_id', 'integer', ['limit' => 11, 'signed' => false, 'null' => false])

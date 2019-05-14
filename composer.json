@@ -11,7 +11,8 @@
         "league/plates": "3.*",
         "ext-mysqli": "*",
         "nesbot/carbon": "^2.16",
-        "robmorgan/phinx": "*"
+        "robmorgan/phinx": "*",
+        "fzaninotto/faker": "*"
     },
     "autoload" : {
         "psr-4" : {
